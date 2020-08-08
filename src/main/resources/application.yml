@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: auth-ldap
+  ldap:
+    urls: ldap://ldap.forumsys.com:389
+    base: dc=example,dc=com
+    username: cn=read-only-admin,dc=example,dc=com
+    password: password
+
+jwt:
+  secret: usersecret
+
+application:
+  jwt:
+    secretKey: super_secure_secret_key_super_secure_secret_key_super_secure_secre
+    tokenPrefix: Bearer
+    tokenExpirationAfterDays: 10
